@@ -1,5 +1,5 @@
 **1. Does preprocessing affect the result of the model? Why?**
-git
+
 All in all, I realized that preprocessing the data is pretty important before feeding it to the K-Means model. I noticed that K-Means mostly works with numbers because it’s trying to figure out how "far apart" things are to group them. So, for the Melbourne housing data, I had to pick out columns that were numerical, like 'Price', 'Landsize', and 'Rooms'. Another thing was the missing values, or NaNs; the model wouldn't know what to do with those when trying to calculate distances, so I filled them in using the average for each column. I understand that doing this changes the data points a bit, so the groups the model finds afterward would probably be different than if I'd just deleted those rows or used a different value. It makes sense that cleaning and choosing the right data first would give more meaningful clusters, and I also learned that if different features have really different scales (like a huge 'Landsize' number versus a small 'Rooms' number), that could also skew the results if they weren't "scaled," though for this beginner approach, we just focused on handling the missing numbers and picking relevant columns.
 
 **2. What is your conclusion based on the interpretation or result of your model?**
